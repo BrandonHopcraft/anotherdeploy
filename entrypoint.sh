@@ -5,6 +5,7 @@ echo $BRANCH
 echo repourl
 echo $REPOSITORY_URL
 
+apt-get update
 apt-get install jq
 
 REPOINFO=$( jq .repository $GITHUB_EVENT_PATH )
