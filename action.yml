@@ -37,5 +37,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    REPOSITORY_URL: wellthen
+    REPOSITORY_URL: ${{ inputs.build_timeout_in_minutes }}
     BRANCH: wellthen
