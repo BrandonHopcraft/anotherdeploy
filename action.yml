@@ -34,9 +34,5 @@ inputs:
     required: false
     default: ''
 runs:
-  using: "composite"
-  steps:
-  - run: echo "hiya ${{ github.event.repository.html_url }}"
-    shell: bash
-  - using: 'docker'
-    image: 'Dockerfile'
+  using: 'docker'
+  image: 'Dockerfile'
