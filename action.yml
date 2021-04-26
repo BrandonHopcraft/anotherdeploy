@@ -42,4 +42,4 @@ runs:
   image: 'Dockerfile'
   env:
     REPOSITORY_URL: ${{ inputs.repository_urla }}
-    BRANCH: wellthen
+    BRANCH: ${{fromJson($GITHUB_EVENT_PATH).repository.html_url}}
