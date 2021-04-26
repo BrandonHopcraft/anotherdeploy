@@ -16,4 +16,4 @@ echo $REPOSITORY_URL
 
 
 
-./StaticSitesClient $INPUT_ACTION --verbose
+./StaticSitesClient --verbose
