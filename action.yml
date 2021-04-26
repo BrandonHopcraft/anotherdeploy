@@ -36,7 +36,7 @@ inputs:
   repository_urla:
     description: 'The url of the source repository. Default: `github.repository.html_url`'
     required: false
-    default: '${{fromJson(github.event_path).repository}}'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
