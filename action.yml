@@ -38,6 +38,5 @@ runs:
   steps:
   - run: echo "hiya ${{ github.event.repository.html_url }}"
     shell: bash
-  - run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
-    using: 'docker'
+  - using: 'docker'
     image: 'Dockerfile'
