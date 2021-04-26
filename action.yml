@@ -36,7 +36,7 @@ inputs:
   repository_url:
     description: 'The url of the source repository. Default: `github.repository.html_url`'
     required: false
-    default: '${{ github.repository.html_url }}'
+    default: '${{ github.actor }}'
 runs:
   using: 'docker'
   image: 'Dockerfile'
