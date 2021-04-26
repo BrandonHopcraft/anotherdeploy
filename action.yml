@@ -33,9 +33,13 @@ inputs:
     description: 'Allows the action to continue without azure_static_web_apps_api_token'
     required: false
     default: ''
+  repository_url:
+    description: 'The url of the source repository. Default: `github.repository.html_url`'
+    required: false
+    default: '${{ github.repository.html_url }}'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    REPOSITORY_URL: ${{ inputs.build_timeout_in_minutes }}
+    REPOSITORY_URL: ${{ inputs.repository_url }}
     BRANCH: wellthen
