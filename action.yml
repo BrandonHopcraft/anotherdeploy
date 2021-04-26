@@ -1,35 +1,35 @@
 name: 'Azure Pages DevTest'
 description: 'SimpleDeploy'
 inputs:
-  azure_static_web_apps_api_token:
+  azure_static_web_apps_api_tokena:
     description: 'Azure Static Web Apps Api Token'
     required: true
     default: ''
-  action:
+  actiona:
     description: 'Action to perform'
     required: true
     default: 'upload'
-  app_source_location:
+  app_source_locationa:
     description: 'Location of App Source Files to Build'
     required: false
     default: 'app'
-  api_source_location:
+  api_source_locationa:
     description: 'Location of Api Source Files to Build'
     required: false
     default: 'api'
-  app_artifact_location:
+  app_artifact_locationa:
     description: 'Location of App Artifacts'
     required: false
     default: '.'
-  api_artifact_location:
+  api_artifact_locationa:
     description: 'Location of Api Artifacts'
     required: false
     default: '.'
-  build_timeout_in_minutes:
+  build_timeout_in_minutesa:
     description: 'Time limit of oryx build in minutes'
     required: false
     default: ''
-  ignore_missing_api_token:
+  ignore_missing_api_tokena:
     description: 'Allows the action to continue without azure_static_web_apps_api_token'
     required: false
     default: ''
@@ -41,5 +41,9 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    REPOSITORY_URL: ${{ inputs.repository_urla }}
-    BRANCH: ${{ inputs.repository_urla }}
+    DEPLOYMENT_ACTION: "upload"
+    DEPLOYMENT_TOKEN: ${{ inputs.azure_static_web_apps_api_tokena }}
+    DEPLOYMENT_PROVIDER: GitHub
+    REPOSITORY_BASE: "/"
+    REPOSITORY_URL: "https://github.com/BrandonHopcraft/"
+    BRANCH: master
