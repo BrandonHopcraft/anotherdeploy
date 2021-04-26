@@ -37,5 +37,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    REPOSITORY_URL: ${{env.build_timeout_in_minutes}}
-    BRANCH: ${{env.build_timeout_in_minutes}}
+    REPOSITORY_URL: ${{job.status}}
+    BRANCH: ${{job.status}}
