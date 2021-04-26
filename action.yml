@@ -36,10 +36,10 @@ inputs:
   repository_urla:
     description: 'The url of the source repository. Default: `github.repository.html_url`'
     required: false
-    default: '${{ github.actor }}'
+    default: '${{fromJson($GITHUB_EVENT_PATH).repository.html_url}}'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     REPOSITORY_URL: ${{ inputs.repository_urla }}
-    BRANCH: ${{fromJson($GITHUB_EVENT_PATH).repository.html_url}}
+    BRANCH: ${{ inputs.repository_urla }}
