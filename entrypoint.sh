@@ -1,7 +1,6 @@
 #!/bin/sh -l
 cd /bin/staticsites/
 DEPLOYMENT_ACTION=upload
-DEPLOYMENT_TOKEN="notreal"
 DEPLOYMENT_PROVIDER=GitHub
 REPOSITORY_URL="https://github.com/BrandonHopcraft/ReactSite/"
 BRANCH=master
