@@ -36,5 +36,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  #env:
-    #DEPLOYMENT_TOKEN: ${{ inputs.azure_static_web_apps_api_token }}
+  env:
+    DEPLOYMENT_TOKEN: ${{ inputs.azure_static_web_apps_api_token }}
