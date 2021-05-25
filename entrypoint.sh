@@ -5,5 +5,6 @@ export DEPLOYMENT_PROVIDER=GitHub
 export REPOSITORY_URL="https://github.com/BrandonHopcraftttttttt/ReactSite/"
 export BRANCH="master"
 export ENVIRONMENT_NAME="123"
+export GITHUB_EVENT_PATH=""
 
 ./StaticSitesClient --verbose
